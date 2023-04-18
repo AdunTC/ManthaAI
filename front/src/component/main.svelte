@@ -6,6 +6,7 @@
     // import svelte components
     import Desk from "./desk.svelte";
     import ResponseConfiguration from "./responseConfiguration.svelte";
+    import Result from "./result.svelte";
 
     // script
     let roomName = "";
@@ -14,6 +15,9 @@
 </script>
 
 <style>
+    #main-box {
+        display: flex;
+    }
     #context-box {
         background-color: rgb(70, 90, 130);
         width: 500px;
@@ -21,9 +25,20 @@
         padding: 10px;
         border-radius: 10px;
     }
+    #generated-prompt {
+        float: left;
+        margin-left: 10px;
+    }
 </style>
 
-<div id="context-box">
-    {#if roomName == "Desk"} <Desk /> {/if}
-    {#if roomName == "Response Configuration"} <ResponseConfiguration /> {/if}
+<div id="main-box">
+    <div id="context-box">
+        {#if roomName == "Desk"} <Desk /> {/if}
+        {#if roomName == "Response Configuration"} <ResponseConfiguration /> {/if}
+    </div>
+    <div id="generated-prompt">
+        <Result />
+    </div>
 </div>
+
+
