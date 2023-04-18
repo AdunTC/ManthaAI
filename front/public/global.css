@@ -1,0 +1,105 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: rgb(30, 35, 55);
+	color: white;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+.center-box {
+	text-align: center;
+}
+
+.right-box {
+	text-align: right;
+}
+
+.green-button {
+	color: white;
+	background-color: rgb(75, 160, 115);
+	border: none;
+	cursor: pointer;
+}
+.green-button:hover {
+	color: white;
+	background-color: rgb(60, 130, 90);
+	border: none;
+}
+.green-button:active {
+	color: white;
+	background-color: rgb(50, 100, 75);
+	border: none;
+}
+
+.yellow-button {
+	color: white;
+	background-color: rgb(190, 190, 90);
+	border: none;
+	cursor: pointer;
+}
+.yellow-button:hover {
+	color: white;
+	background-color: rgb(175, 160, 65);
+	border: none;
+}
+.yellow-button:active {
+	color: white;
+	background-color: rgb(140, 130, 40);
+	border: none;
+}
+
+.red-button {
+	color: white;
+	background-color: rgb(190, 90, 90);
+	border: none;
+	cursor: pointer;
+}
+.red-button:hover {
+	color: white;
+	background-color: rgb(175, 65, 65);
+	border: none;
+}
+.red-button:active {
+	color: white;
+	background-color: rgb(140, 40, 40);
+	border: none;
+}
