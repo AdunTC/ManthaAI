@@ -103,3 +103,8 @@ input:disabled {
 	background-color: rgb(140, 40, 40);
 	border: none;
 }
+
+.small-text {
+	color: red;
+	font-size: 10px;
+}

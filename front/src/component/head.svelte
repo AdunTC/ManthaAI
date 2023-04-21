@@ -30,7 +30,7 @@
         background-color: transparent;
     }
     .active {
-        background-color: rgb(20, 25, 40);
+        background-color: rgb(100, 120, 170);
     }
     .active:hover {
         color: white;
@@ -38,7 +38,7 @@
 </style>
 
 <div class="header">
-    <div class="center-text" id="title">MANTHA AI</div>
+    <div class="right-box" id="title">MANTHA AI</div>
     <hr>
     <div id="header-menu">
         {#each menuItems as item}

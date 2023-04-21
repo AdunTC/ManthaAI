@@ -10,8 +10,13 @@
         background-color: rgba(255, 255, 255, 10%);
         border: none;
         outline: none;
+        color: white;
+    }
+    #gpname {
+        font-size: 20px;
     }
 </style>
 
-<div><b>Generated Prompt</b></div>
+<div class="center-box"><b id="gpname">Generated Prompt</b></div>
 <textarea id="prompt-box"></textarea>
+<div class="right-box">[0 tokens]</div>

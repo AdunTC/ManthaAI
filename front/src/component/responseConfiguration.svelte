@@ -2,11 +2,30 @@
     // import svelte libs
     import { onMount, onDestroy } from "svelte";
 
+    // import libs
+    import {tokenize} from "sbd";
+
     // value vars
     let temperatureValue = 0.9;
     let frequencyPenaltyValue = 0.5;
     let presencePenaltyValue = 0.5;
+
+    let mainPrompt_text = "";
+    let firstDescription_text = "";
+    let mainPrompt_tokens = 0;
+    let firstDescription_tokens = 0;
     
+    // countTokens
+    const countTokens = (name) => {
+        if (name = "MP") {
+            mainPrompt_tokens = mainPrompt_text.length;
+        }
+        if (name = "FD") {
+            firstDescription_tokens = firstDescription_text.length;
+        }
+        
+    }
+
     // handleInput
     const handleInput_Temperature = (event) => {
         temperatureValue = Number(event.target.value);
@@ -79,10 +98,6 @@
         margin-bottom: 10px;
     }
 
-    .result {
-        text-align: right;
-    }
-
     .prompt-input {
         color: white;
         background-color: rgba(255, 255, 255, 10%);
@@ -117,11 +132,13 @@
 
     <!-- Main Prompt -->
     <div class="response-menu">Main Prompt</div>
-    <textarea class="prompt-input" id="main-prompt"></textarea><br>
+    <textarea class="prompt-input" id="main-prompt" bind:value={mainPrompt_text} on:input={() => countTokens("MP")}></textarea><br>
+    <div class="right-box">[{mainPrompt_tokens} tokens]</div>
 
     <!-- First Description -->
     <div class="response-menu">First Description</div>
-    <textarea class="prompt-input" id="first-description"></textarea><br>
+    <textarea class="prompt-input" id="first-description" bind:value={firstDescription_text} on:input={() => countTokens("FD")}></textarea><br>
+    <div class="right-box">[{firstDescription_tokens} tokens]</div>
 
     <!-- Save Preset -->
     <p class="right-box">
